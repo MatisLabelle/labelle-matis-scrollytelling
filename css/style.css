@@ -11,6 +11,10 @@
   --rose: #fac2db;
 }
 
+/*--------------------------------------------------------- 
+# Styles Généraux 
+---------------------------------------------------------*/
+
 * {
   margin: 0px;
   padding: 0px;
@@ -41,10 +45,23 @@ h2 {
   text-align: center;
   font-family: "komika";
   color: var(--rose);
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.1vw;
   -webkit-text-stroke-color: var(--mauve);
   font-size: 6vh;
   z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: -600vh;
+  font-size: 11px;
+  color: var(--rose);
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: var(--rose);
+  width: 22vw;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
 .p-header {
@@ -140,6 +157,9 @@ section {
   position: relative;
 }
 
+/*---------------------------------------------------------- 
+# Chapitre 1
+----------------------------------------------------------*/
 #chapitre1 {
   background-image: url(../images/background/space.png);
 }
@@ -191,6 +211,9 @@ section {
   background-color: var(--orange);
 }
 
+/*---------------------------------------------------------- 
+# Chapitre 2
+----------------------------------------------------------*/
 #chapitre2 {
   background-image: url(../images/background/ocean.png);
 }
@@ -235,30 +258,48 @@ section {
 
 .whale {
   position: absolute;
-  top: 50vh;
-  left: 20vw;
-  width: 70vw;
-  aspect-ratio: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30vw;
+  aspect-ratio: 822 / 152;
   background-image: url(../images/elements/spritesheets/spritesheet_whale.png);
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 30%;
   animation-name: whale;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: steps(42);
   animation-iteration-count: infinite;
-  animation-play-state: paused;
 }
 @keyframes whale {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: -2940vw 0;
+    background-position: -1260vw 0;
   }
 }
-.is-scrolling .whale {
-  animation-play-state: running;
+.whale-container {
+  position: absolute;
+  bottom: 0vh;
+  animation-name: whale-movement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: initial;
+  border: solid 1px red;
+  height: 30vh;
+  width: 30vw;
+}
+@keyframes whale-movement {
+  from {
+    transform: translateX();
+  }
+  to {
+    transform: translateX();
+  }
 }
 
 .line {
@@ -272,6 +313,9 @@ section {
   top: 5vh;
 }
 
+/*---------------------------------------------------------- 
+# Chapitre 3
+----------------------------------------------------------*/
 #chapitre3 > h2 {
   z-index: 1;
 }
@@ -290,6 +334,9 @@ section {
   height: 100%;
 }
 
+/*---------------------------------------------------------- 
+# Chapitre 4
+----------------------------------------------------------*/
 #chapitre4 {
   background-image: url(../images/background/space.png);
 }
@@ -303,6 +350,9 @@ section {
   top: 0;
 }
 
+/*---------------------------------------------------------- 
+# Chapitre 5
+----------------------------------------------------------*/
 #chapitre5 {
   background-image: url(../images/background/space.png);
 }
@@ -332,21 +382,30 @@ section {
   top: 50vh;
 }
 
+/*---------------------------------------------------------- 
+# Chapitre 6
+----------------------------------------------------------*/
 #chapitre6 {
   background-image: url(../images/background/mail-box.jpg);
 }
 
-footer {
+.bulle {
+  width: 40vw;
+  height: auto;
   position: absolute;
-  bottom: -600vh;
-  font-size: 11px;
-  color: var(--rose);
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: var(--rose);
-  width: 22vw;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.message-output {
+  width: 30vw;
+  font-size: 2.5vw;
+  position: absolute;
+  top: 4vh;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .test {
