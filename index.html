@@ -41,12 +41,147 @@
     </header>
 
     <main>
-      <section id="chapitre1"></section>
-      <section id="chapitre2"></section>
-      <section id="chapitre3"></section>
-      <section id="chapitre4"></section>
-      <section id="chapitre5"></section>
-      <section id="chapitre6"></section>
+      <section id="chapitre1">
+        <h2>Écrivez un message à envoyer n'importe où.</h2>
+        <textarea class="message-input" rows="5" cols="35"></textarea>
+        <button class="message-send" type="submit">Envoyer</button>
+        <svg
+          class="papier"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1920"
+          height="1080"
+          viewBox="0 0 1920 1080"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #fff;
+                stroke: #000;
+                stroke-width: 10px;
+                fill-rule: evenodd;
+              }
+            </style>
+          </defs>
+          <path
+            class="cls-1"
+            d="M565.26,38.257h847.02V1043H559.419s2.166-372.554,3.86-663.943C564.367,191.919,565.26,38.257,565.26,38.257Z"
+          />
+        </svg>
+
+        <svg
+          class="plane"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1920"
+          height="1080"
+          viewBox="0 0 1920 1080"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #fbf9fc;
+                stroke-width: 10px;
+              }
+
+              .cls-1,
+              .cls-2 {
+                stroke: #000;
+                fill-rule: evenodd;
+              }
+
+              .cls-2 {
+                fill: #9b7e9a;
+                stroke-width: 5px;
+              }
+            </style>
+          </defs>
+          <path
+            class="cls-1"
+            d="M354,825L242,575,1380,135,794,1051,670,783l6-54Z"
+          />
+          <path class="cls-2" d="M678,783l684-632L356,825,680,725Z" />
+        </svg>
+      </section>
+      <section id="chapitre2">
+        <h2>L'avion en papier ne recule devant rien.</h2>
+        <div class="bird-container"><div class="bird"></div></div>
+        <div class="whale-container"><div class="whale"></div></div>
+
+        <div class="line"></div>
+      </section>
+      <section id="chapitre3">
+        <h2>Il va voir des paysages magnifiques.</h2>
+        <div class="bg-parallax">
+          <div class="montagne nuage">
+            <img
+              class="paral"
+              src="images/background/montagne-pink.png"
+              alt="arière plan, nuage"
+            />
+          </div>
+          <div class="montagne roche">
+            <img
+              class="paral"
+              src="images/background/montagne-mauve.png"
+              alt="arière plan, montagne roche"
+            />
+          </div>
+          <div class="montagne vege">
+            <img
+              class="paral"
+              src="images/background/montagne-verte.png"
+              alt="arière plan, montagne végétation"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="chapitre4">
+        <h2>Et d'autres plus effrayant,</h2>
+        <div class="lune">
+          <img
+            class="lune gauche"
+            src="images/elements/lune/lune-g.png"
+            alt="partie gauche de la lune"
+          />
+          <img
+            class="lune droite"
+            src="images/elements/lune/lune-d.png"
+            alt="partie droite de la lune"
+          />
+        </div>
+      </section>
+      <section id="chapitre5">
+        <h2>Mais il délivrera le message coûte que coûte.</h2>
+        <div class="planetes">
+          <img
+            class="planete no1"
+            src="images/elements/planete/planete-1-t.png"
+            alt="planete"
+          />
+          <img
+            class="planete no2"
+            src="images/elements/planete/planete-2-t.png"
+            alt="planete"
+          />
+          <img
+            class="planete no3"
+            src="images/elements/planete/planete-3-t.png"
+            alt="planete"
+          />
+          <img
+            class="planete no4"
+            src="images/elements/planete/planete-4-t.png"
+            alt="planete"
+          />
+          <img
+            class="planete no5"
+            src="images/elements/planete/planete-5-t.png"
+            alt="planete"
+          />
+        </div>
+      </section>
+      <section id="chapitre6">
+        <div class="message-affichage">message...</div>
+      </section>
     </main>
 
     <footer>
@@ -60,6 +195,7 @@
         Canva
       </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="js/script.js"></script>
   </body>
