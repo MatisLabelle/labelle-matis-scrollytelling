@@ -53,7 +53,7 @@ h2 {
 
 footer {
   position: absolute;
-  bottom: -600vh;
+  bottom: -700vh;
   font-size: 11px;
   color: var(--rose);
   -webkit-text-stroke-width: 0.1px;
@@ -230,7 +230,8 @@ section {
   animation-duration: 1s;
   animation-timing-function: steps(3);
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-direction: normal;
+  animation-play-state: paused;
 }
 @keyframes bird {
   from {
@@ -240,20 +241,9 @@ section {
     background-position: -90vw 0;
   }
 }
-.bird-container {
-  animation-name: bird-movement;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: initial;
-}
-@keyframes bird-movement {
-  from {
-    transform: translateX(-20vw);
-  }
-  to {
-    transform: translateX(100vw);
-  }
+
+.is-scrolling .bird {
+  animation-play-state: running;
 }
 
 .whale {
@@ -273,6 +263,7 @@ section {
   animation-duration: 1s;
   animation-timing-function: steps(42);
   animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
 @keyframes whale {
   from {
@@ -282,36 +273,25 @@ section {
     background-position: -1254vw 0;
   }
 }
+.is-scrolling .whale {
+  animation-play-state: running;
+}
+
 .whale-container {
   position: absolute;
   bottom: 0vh;
-  animation-name: whale-movement;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: initial;
-  border: solid 1px red;
   height: 30vh;
   width: 20vw;
-}
-@keyframes whale-movement {
-  from {
-    transform: translateX();
-  }
-  to {
-    transform: translateX();
-  }
 }
 
 .line {
   position: absolute;
-  height: 40vh;
-  width: 100vw;
-  background-image: url(../images/elements/line/line.png);
+  width: 40vw;
   background-size: contain;
   background-repeat: no-repeat;
   left: 50vw;
-  top: 5vh;
+  top: 20vh;
+  opacity: 60%;
 }
 
 /*---------------------------------------------------------- 
@@ -325,14 +305,34 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  left: -50vw;
   top: 0;
 }
 .paral {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.nuage {
+  background-image: url(../images/background/montagne-pink.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
+}
+.roche {
+  background-image: url(../images/background/montagne-mauve.png);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
+}
+.vege {
+  background-image: url(../images/background/montagne-verte.png);
+  background-size: 220%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
 }
 
 /*---------------------------------------------------------- 
@@ -407,34 +407,4 @@ section {
   right: 0;
   left: 0;
   margin: auto;
-}
-
-.test {
-  height: 120vh;
-}
-.ss-test {
-  position: relative;
-  top: 20%;
-  width: 50vw;
-  aspect-ratio: 1/1;
-  background-image: url(../images/elements/spritesheet_whale.png);
-  background-size: cover;
-  animation-name: test;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(42);
-  animation-play-state: paused;
-  border: solid 1px red;
-}
-@keyframes test {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 2100vw 0;
-  }
-}
-
-.is-scrolling .ss-test {
-  animation-play-state: running;
 }

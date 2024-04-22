@@ -57,7 +57,7 @@
         >
           <defs>
             <style>
-              .cls-1 {
+              .cls-1-paper {
                 fill: #fff;
                 stroke: #000;
                 stroke-width: 10px;
@@ -66,7 +66,7 @@
             </style>
           </defs>
           <path
-            class="cls-1"
+            class="cls-1-paper"
             d="M565.26,38.257h847.02V1043H559.419s2.166-372.554,3.86-663.943C564.367,191.919,565.26,38.257,565.26,38.257Z"
           />
         </svg>
@@ -80,28 +80,28 @@
         >
           <defs>
             <style>
-              .cls-1 {
+              .cls-1-plane {
                 fill: #fbf9fc;
                 stroke-width: 10px;
               }
 
-              .cls-1,
-              .cls-2 {
+              .cls-1-plane,
+              .cls-2-plane {
                 stroke: #000;
                 fill-rule: evenodd;
               }
 
-              .cls-2 {
+              .cls-2-plane {
                 fill: #9b7e9a;
                 stroke-width: 5px;
               }
             </style>
           </defs>
           <path
-            class="cls-1"
+            class="cls-1-plane"
             d="M354,825L242,575,1380,135,794,1051,670,783l6-54Z"
           />
-          <path class="cls-2" d="M678,783l684-632L356,825,680,725Z" />
+          <path class="cls-2-plane" d="M678,783l684-632L356,825,680,725Z" />
         </svg>
       </section>
       <!-- ---------- Fin Chapitre 1 ------------------ -->
@@ -111,34 +111,34 @@
         <div class="bird-container"><div class="bird"></div></div>
         <div class="whale-container"><div class="whale"></div></div>
 
-        <div class="line"></div>
+        <div class="line">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-width: 5px;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path
+              id="path"
+              class="cls-1"
+              d="M226,604s124.375-110.75,306-99,98.375,130.75,65,132c-30.375,4.25-32.625-15.75-27-32s57.375-69.25,228,39c-0.375.25-39,279-39,279L976,788l242,117-53-258,192-177-255-75L988,161,844,427s-166.625,106.75-156,9c13.625-76.75,81.875-17.75,95,18s74.375,79.75,157,87,233.37-83.75,248-93,127.87-84.75,243-89,180.37,2.75,261,141"
+            />
+          </svg>
+        </div>
       </section>
       <!-- ---------- Fin Chapitre 2 ------------------ -->
       <!-- ---------- Début Chapitre 3 ------------------ -->
       <section id="chapitre3">
         <h2>Il va voir des paysages magnifiques.</h2>
         <div class="bg-parallax">
-          <div class="montagne nuage">
-            <img
-              class="paral"
-              src="images/background/montagne-pink.png"
-              alt="arière plan, nuage"
-            />
-          </div>
-          <div class="montagne roche">
-            <img
-              class="paral"
-              src="images/background/montagne-mauve.png"
-              alt="arière plan, montagne roche"
-            />
-          </div>
-          <div class="montagne vege">
-            <img
-              class="paral"
-              src="images/background/montagne-verte.png"
-              alt="arière plan, montagne végétation"
-            />
-          </div>
+          <div class="montagne nuage"></div>
+          <div class="montagne roche"></div>
+          <div class="montagne vege"></div>
         </div>
       </section>
       <!-- ---------- Fin Chapitre 3 ------------------ -->
@@ -218,6 +218,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
