@@ -261,6 +261,7 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
+  top: 0;
   margin: auto;
   width: 30vw;
   aspect-ratio: 822 / 152;
@@ -269,7 +270,7 @@ section {
   background-repeat: no-repeat;
   opacity: 30%;
   animation-name: whale;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: steps(42);
   animation-iteration-count: infinite;
 }
@@ -278,7 +279,7 @@ section {
     background-position: 0 0;
   }
   to {
-    background-position: -1260vw 0;
+    background-position: -1254vw 0;
   }
 }
 .whale-container {
@@ -291,7 +292,7 @@ section {
   animation-direction: initial;
   border: solid 1px red;
   height: 30vh;
-  width: 30vw;
+  width: 20vw;
 }
 @keyframes whale-movement {
   from {
