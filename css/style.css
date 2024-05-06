@@ -162,6 +162,20 @@ section {
   position: relative;
 }
 
+.info {
+  position: absolute;
+  top: 0;
+  font-size: 11px;
+  color: var(--rose);
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: var(--rose);
+  width: 10vw;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  z-index: 1;
+}
+
 /*---------------------------------------------------------- 
 # Chapitre 1
 ----------------------------------------------------------*/
