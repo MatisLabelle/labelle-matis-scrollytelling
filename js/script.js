@@ -20,13 +20,12 @@ send.addEventListener("click", function () {
   let input = document.querySelector(".message-input").value;
 
   // anim chapitre 1
-  /*
+
   gsap.to(".cls-1-paper", {
     morphSVG: {
       shape: ".cls-1-plane",
     },
   });
-  */
 
   gsap.to(".message-input", {
     scale: 0,
@@ -84,7 +83,7 @@ gsap
   .to(".whale-container", { x: "80vw", duration: 5 }, "<");
 
 // anim vent chapitre 2
-/*
+
 gsap.set("#path", { drawSVG: "0% 5%" });
 gsap.to("#path", {
   scrollTrigger: "chapitre2",
@@ -93,7 +92,6 @@ gsap.to("#path", {
   ease: "none",
   repeat: -1,
 });
-*/
 
 //anim plane chapitre 3
 gsap.to(".p3", {
