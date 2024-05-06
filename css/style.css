@@ -53,7 +53,7 @@ h2 {
 
 footer {
   position: absolute;
-  bottom: -700vh;
+  bottom: 0;
   font-size: 11px;
   color: var(--rose);
   -webkit-text-stroke-width: 0.1px;
@@ -62,6 +62,7 @@ footer {
   text-align: left;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
+  z-index: 1;
 }
 
 .p-header {
@@ -91,6 +92,10 @@ footer {
     top: 15px;
     left: 20px;
   }
+}
+
+.c2 {
+  opacity: 0;
 }
 
 .scroll {
@@ -164,8 +169,7 @@ section {
   background-image: url(../images/background/space.png);
 }
 
-.papier,
-.plane {
+.papier {
   width: 70vw;
   position: absolute;
   top: 0;
@@ -173,10 +177,15 @@ section {
   bottom: 0;
   right: 0;
   margin: auto;
+  z-index: 1;
 }
 
 .plane {
-  z-index: -1;
+  position: absolute;
+  width: 25vw;
+  left: -20vw;
+  top: -40vh;
+  transform: rotate(15deg);
 }
 
 .message-input {
@@ -211,6 +220,11 @@ section {
   background-color: var(--orange);
 }
 
+.cls-2-plane,
+.cls-1-plane {
+  opacity: 0;
+}
+
 /*---------------------------------------------------------- 
 # Chapitre 2
 ----------------------------------------------------------*/
@@ -220,7 +234,7 @@ section {
 
 .bird {
   position: absolute;
-  top: 30vh;
+  top: 50vh;
   width: 30vw;
   aspect-ratio: 811 / 422;
   background-image: url(../images/elements/spritesheets/spritesheet_bird.png);
@@ -297,6 +311,10 @@ section {
 /*---------------------------------------------------------- 
 # Chapitre 3
 ----------------------------------------------------------*/
+#chapitre3 {
+  background-color: var(--rose);
+}
+
 #chapitre3 > h2 {
   z-index: 1;
 }
@@ -322,17 +340,23 @@ section {
 }
 .roche {
   background-image: url(../images/background/montagne-mauve.png);
-  background-size: 200%;
+  background-size: 125%;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: 50% 0%;
+  background-position: 50%;
 }
 .vege {
   background-image: url(../images/background/montagne-verte.png);
-  background-size: 220%;
+  background-size: 150%;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: 50% 0%;
+  background-position: 50%;
+}
+
+.p3 {
+  width: 25vw;
+  z-index: 4;
+  top: -30vh;
 }
 
 /*---------------------------------------------------------- 
@@ -340,6 +364,10 @@ section {
 ----------------------------------------------------------*/
 #chapitre4 {
   background-image: url(../images/background/space.png);
+}
+
+#titre4 {
+  z-index: 3;
 }
 
 .lune {
@@ -351,6 +379,14 @@ section {
   top: 0;
 }
 
+.droite {
+  z-index: 2;
+}
+
+.p4 {
+  z-index: 1;
+  left: -25vw;
+}
 /*---------------------------------------------------------- 
 # Chapitre 5
 ----------------------------------------------------------*/
@@ -383,6 +419,11 @@ section {
   top: 50vh;
 }
 
+.p5 {
+  left: -25vw;
+  top: 10%;
+  z-index: 1;
+}
 /*---------------------------------------------------------- 
 # Chapitre 6
 ----------------------------------------------------------*/
@@ -391,20 +432,26 @@ section {
 }
 
 .bulle {
-  width: 40vw;
+  width: 80vh;
   height: auto;
   position: absolute;
-  right: 0;
   left: 0;
   margin: auto;
 }
 
 .message-output {
-  width: 30vw;
+  width: 80vh;
   font-size: 2.5vw;
   position: absolute;
-  top: 4vh;
-  right: 0;
+  top: 5vh;
   left: 0;
-  margin: auto;
+}
+
+.p6 {
+  top: -45%;
+  z-index: 1;
+}
+
+.ul.technique-gsap {
+  display: none;
 }
