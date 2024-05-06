@@ -71,13 +71,14 @@ gsap
   .to(".plane", {
     duration: 40,
     motionPath: {
+      autoRotate: true,
       path: [
         { x: "60vw", y: "10vh" },
         { x: "120vw", y: "-10vh" },
       ],
     },
   })
-  .fromTo(".bird-container", { x: "-20vw" }, { x: "100vw", duration: 40 }, "<")
+  .fromTo(".bird-container", { x: "-20vw" }, { x: "60vw", duration: 40 }, "<")
   .fromTo(".whale-container", { x: "25vw" }, { x: "50vw", duration: 35 }, "<")
   .to(".whale-container", { scale: 0, duration: 5 }, "-=5")
   .to(".whale-container", { x: "80vw", duration: 5 }, "<");
@@ -101,6 +102,7 @@ gsap.to(".p3", {
     pin: true,
   },
   motionPath: {
+    autoRotate: true,
     path: [
       { x: "60vw", y: "-10%" },
       { x: "120%", y: "10%" },
@@ -137,6 +139,7 @@ gsap.to(".p4", {
     scrub: true,
     pin: true,
   },
+  rotate: 15,
   motionPath: {
     path: [
       { x: "100%", y: "10%" },
@@ -151,6 +154,9 @@ gsap.to(".gauche", {
   scrollTrigger: {
     trigger: "#chapitre4",
     scrub: true,
+    markers: true,
+    start: "top 50%",
+    end: "bottom 25%",
   },
 });
 gsap.to(".droite", {
@@ -158,6 +164,9 @@ gsap.to(".droite", {
   scrollTrigger: {
     trigger: "#chapitre4",
     scrub: true,
+    markers: true,
+    start: "top 50%",
+    end: "bottom 25%",
   },
 });
 
@@ -183,6 +192,7 @@ gsap.to(".p5", {
     pin: true,
   },
   motionPath: {
+    autoRotate: true,
     path: [
       { x: "150%", y: "-10%" },
       { x: "275%", y: "-18%" },
